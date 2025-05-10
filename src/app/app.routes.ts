@@ -4,6 +4,6 @@ import { CoursesListComponent } from '../components/courses-list/courses-list.co
 
 export const routes: Routes = [
   { path: 'courses/:id', component: CourseDetailsComponent },
-  { path: 'courses', component: CoursesListComponent }, // Optional: Route for the main courses list
-  { path: '', redirectTo: '/courses', pathMatch: 'full' }, // Optional: Redirect root path
+  { path: 'dashboard', component: CoursesListComponent }, // Optional: Route for the main courses list
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // Optional: Redirect root path
 ];

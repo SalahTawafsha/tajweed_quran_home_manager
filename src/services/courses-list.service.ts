@@ -6,11 +6,11 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root'
 })
 export class CoursesListService {
-  private apiUrl = 'http://localhost:8080/courses'; // Example API endpoint
+  private apiUrl = 'http://localhost:8080/dashboard'; // Example API endpoint
 
   constructor(private http: HttpClient) { } // Inject HttpClient
 
-  getData(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+  getData(): Observable<{ [key: string]: any }> {
+    return this.http.get<{ [key: string]: any }>(this.apiUrl);
   }
 }

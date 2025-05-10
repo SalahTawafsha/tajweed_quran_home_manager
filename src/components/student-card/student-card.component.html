@@ -1,4 +1,4 @@
-<div class="card h-100" [style]="isSelected() ? 'background-color: red' : ''">
+<div class="card h-100 {{ ngClass() }}">
     <div class="card-body">
         <h5 class="card-title">{{ id() + " - " + name() }}</h5>
         <p class="card-text">

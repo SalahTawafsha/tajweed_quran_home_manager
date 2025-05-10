@@ -1,9 +1,26 @@
+:root {
+  --card-background:  #fafbfc;
+  --card-hover-background:  #f5f7fa;
+}
+
+* {
+    direction: rtl;
+}
+
 .card-link {
     text-decoration: none;
 
     .card {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        background-color: #f8f9fa;
+        background-color: var(--card-background);
         cursor: pointer;
+
+        &:not(.selected):hover {
+          background-color: var(--card-hover-background);
+        }
+          }
+
+    .selected{
+      background-color: red;
     }
 }

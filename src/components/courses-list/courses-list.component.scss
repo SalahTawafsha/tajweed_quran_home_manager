@@ -1,0 +1,74 @@
+.g-3 {
+  justify-content: center;
+}
+
+.horizontal-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem;
+    margin-bottom: 32px;
+  
+    .card {
+      display: inline-block;
+      width: 300px;
+      margin-left: 1rem;
+      white-space: normal; // allow text wrapping inside the card
+      background-color: var(--card-background);
+
+      &:hover{
+        background-color: var(--card-hover-background);
+        cursor: pointer;
+      }
+    }
+
+    .card-text{
+        margin: 0;
+    }
+  
+    // Optional: Hide scrollbar on WebKit
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+  
+details {
+  border-right: 1px solid #d1d8dd;
+  border-bottom: 1px solid #d1d8dd;
+  border-left: 1px solid #d1d8dd;
+  background-color: var(--card-background);
+
+  &:first-child{
+    border-top: 1px solid #d1d8dd;
+  }
+
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    padding: 1em 1em;
+
+    &::marker {
+      display: none; // For modern browsers
+    }
+
+    &:hover {
+      text-decoration: underline;
+      background-color: var(--card-hover-background);
+    }
+  }
+
+  // Optional: style the inner content
+  > *:not(summary) {    
+    margin-top: 0.5em;
+  }
+}

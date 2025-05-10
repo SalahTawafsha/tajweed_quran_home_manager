@@ -11,5 +11,5 @@ export class StudentCardComponent {
   yearOfBirth: InputSignal<number> = input.required<number>();
   name: InputSignal<String> = input.required<String>(); 
   id: InputSignal<number> = input.required<number>();
-  isSelected: InputSignal<boolean> = input.required<boolean>();
+  ngClass: InputSignal<String> = input.required<String>();
 }
