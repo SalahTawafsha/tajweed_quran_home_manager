@@ -1,0 +1,23 @@
+<div class="container py-4" dir="rtl">
+    <div class="row g-3">
+
+        @for (student of selectedCourse?.students; track $index) {
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card-link"  (click)="toggleStudentSelection(student.student_id)">
+                    <app-student-card [id]="student.student_id" [yearOfBirth]="student.year_of_birth" [name]="student.student_name" [isSelected]="selectedStudentsIds.includes(student.student_id)"/>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="center">
+    @if (!isSubmitting) {
+    <div class="column">
+        <input [(ngModel)]="date" type="date"/>
+            <button (click)="submitAttendance()">Select Attendance</button>
+        </div>
+    }@else{
+        <div class="loader"></div>
+    }
+</div>

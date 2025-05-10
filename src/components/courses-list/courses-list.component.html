@@ -1,0 +1,9 @@
+<div class="container py-4" dir="rtl">
+    <div class="row g-3">
+        @for (course of courses; track $index) {
+            <div class="col-12 col-sm-6 col-md-4">
+                <app-course-card [id]="course.id" [course_times]="course.course_times" [teacher_name]="course.teacher_name" [students_count]="course.students_count"/>          
+            </div>
+        }
+    </div>
+</div>
